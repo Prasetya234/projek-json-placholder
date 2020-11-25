@@ -4,6 +4,7 @@ import Comments from './component/Comments';
 import Albums from './component/Albums';
 import Photos from './component/Photos';
 import Todos from './component/Todos';
+import Users from './component/Users';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Link path="/Albums" exact component={Albums} />
         <Link path="/Photos" exact component={Photos} />
         <Link path="/Todos" exact component={Todos} />
+        <Link path="/Users" exact component={Users} />
       </Switch>
     </BrowserRouter>
   );

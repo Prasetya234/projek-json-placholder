@@ -22,28 +22,36 @@ class Albums extends Component{
 
         return(
             <div>
-                <center>
-                    <Mui.ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
-                        <Mui.Button href="/">posts</Mui.Button>
-                        <Mui.Button href="/Comments">Comments</Mui.Button>
-                        <Mui.Button href="/Albums">Albums</Mui.Button>
-                        <Mui.Button href="/Photos">Photos</Mui.Button>
-                        <Mui.Button href="/Todos">Todos</Mui.Button>
-                    </Mui.ButtonGroup>
-                </center>
-                <h1 align="center">data json posts</h1>
-                    <table border="1">
-                        <tr>
+                <nav>
+                    <div class="nav-wrapper  deep-orange">
+                    <a href="#" class="brand-logo right">Logo</a>
+                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                        <li><a href="/">Posts</a></li>
+                        <li><a href="/Comments">Comments</a></li>
+                        <li><a href="/Albums">Albums</a></li>
+                        <li><a href="/Photos">Photos</a></li>
+                        <li><a href="/Todos">Todos</a></li>
+                        <li><a href="/Users">Users</a></li>
+                    </ul>
+                    </div>
+                </nav>
+                <h2 align="center">data json Albums</h2><br/>
+                    <table>
+                    <thead>
+                        <tr class="responsive-table card-panel blue darken-1 centered">
                         <td>userId</td>
                         <td>id</td>
                         <td>Title</td>
                         </tr>
+                    </thead>
                         {data.map(todo =>
+                    <thead>
                         <tr hey={todo.userId}>
                             <td>{todo.userId}</td>
                             <td>{todo.id}</td>
                             <td>{todo.title}</td>
                         </tr>
+                    </thead>
                         )}
                     </table>
             </div>
